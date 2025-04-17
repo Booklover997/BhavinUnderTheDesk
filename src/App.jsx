@@ -31,7 +31,7 @@ export default function Home() {
     const handleScroll = () => {
       const scrollTop = window.pageYOffset;
       if (containerRef.current) {
-        containerRef.current.style.transform = `rotate(31.33deg) translateX(calc(-${scrollTop}px))`;
+        containerRef.current.style.transform = `translateY(-50%) rotate(31.33deg) translateX(calc(-${scrollTop}px))`;
       }
     };
 

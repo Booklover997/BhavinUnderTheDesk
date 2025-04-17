@@ -34,6 +34,11 @@ body {
   transform: translateY(-50%) rotate(31.33deg);
   transform-origin: bottom left;
   will-change:transform;
+  position:fixed;
+}
+.borgum{
+  height:400vw; 
+ position:relative;
 }
 
 /* Navbar */

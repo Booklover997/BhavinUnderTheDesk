@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import AWS from "./assets/AWS.svg";
 import GSEC from "./assets/GSEC.svg";
 import GFACT from "./assets/GFACT.svg";
@@ -8,42 +8,53 @@ import "./styles/App.css";
 
 export default function Home() {
   const containerRef = useRef(null);
-  const threshold = 100;
+  const [height, setHeight] = useState(0);
+  const [borgumHeight, setBorgumHeight] = useState(0);
 
   useEffect(() => {
-    let animationFrameId;
-
-    const handleScroll = () => {
-      const scrollTop = window.pageYOffset * 1;
-
+    const updateHeight = () => {
       if (containerRef.current) {
-        // Using TranslateY creates
-        containerRef.current.style.transform = `rotate(31.33deg) translateX(calc(-${scrollTop}px))`;
+        setHeight(containerRef.current.clientHeight);
       }
-
-      animationFrameId = requestAnimationFrame(handleScroll);
     };
 
+    const calculateWidth = () => {
+      const images = [AWS, GSEC, GFACT, Bhavin];
+      const totalWidth = images.reduce((acc, img) => {
+        const imgElement = new Image();
+        imgElement.src = img;
+        return acc + imgElement.width; // Add the width of each image
+      }, 0);
+      setBorgumHeight(totalWidth); // Set borgum height based on total width
+    };
+
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset;
+      if (containerRef.current) {
+        containerRef.current.style.transform = `rotate(31.33deg) translateX(calc(-${scrollTop}px))`;
+      }
+    };
+
+    updateHeight();
+    calculateWidth();
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Initial call to set the position
 
     return () => {
-      cancelAnimationFrame(animationFrameId);
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
     <>
-      {/* <Nav/> */}
+      {/* <Nav /> */}
       <div className="content-body">
         <div className="c-container" ref={containerRef}>
-          <img className="cert" src={AWS} />
-          <img className="cert" src={GSEC} />
-          <img className="cert" src={GFACT} />
-          <img className="etc" src={Bhavin} />
+          <img className="cert" src={AWS} alt="AWS Certificate" />
+          <img className="cert" src={GSEC} alt="GSEC Certificate" />
+          <img className="cert" src={GFACT} alt="GFACT Certificate" />
+          <img className="etc" src={Bhavin} alt="Bhavin" />
         </div>
-        <div class="borgum"></div>
+        <div className="borgum" style={{ height: `${borgumHeight}px` }}></div>
       </div>
     </>
   );

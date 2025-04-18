@@ -1,10 +1,9 @@
 import { useEffect, useRef, useState } from "react";
-import AWS from "./assets/AWS.svg";
-import GSEC from "./assets/GSEC.svg";
-import GFACT from "./assets/GFACT.svg";
-import Nav from "./Nav.jsx";
-import Bhavin from "./assets/Bhavin.svg";
-import "./styles/App.css";
+import AWS from "../assets/AWS.svg";
+import GSEC from "../assets/GSEC.svg";
+import GFACT from "../assets/GFACT.svg";
+import Bhavin from "../assets/Bhavin.svg";
+import "../styles/App.css";
 
 export default function Home() {
   const containerRef = useRef(null);
@@ -31,7 +30,7 @@ export default function Home() {
     const handleScroll = () => {
       const scrollTop = window.pageYOffset;
       if (containerRef.current) {
-        containerRef.current.style.transform = `translateY(-50%) rotate(31.33deg) translateX(calc(-${scrollTop}px))`;
+        containerRef.current.style.transform = `translateY(-40%) rotate(31.33deg) translateX(calc(-${scrollTop}px))`;
       }
     };
 
@@ -46,7 +45,6 @@ export default function Home() {
 
   return (
     <>
-      {/* <Nav /> */}
       <div className="content-body">
         <div className="c-container" ref={containerRef}>
           <img className="cert" src={AWS} alt="AWS Certificate" />

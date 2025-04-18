@@ -1,10 +1,21 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import { createRoot } from 'react-dom/client';
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router";
+import './index.css';
+import Creds from './pages/Creds.jsx';
+import Enemies from './pages/Enemies.jsx';
+import Home from './pages/Home.jsx';
+import Writeups from './pages/Writeups.jsx';
+
+import Nav from './pages/Nav.jsx';
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+  <BrowserRouter>
+    <Nav/>
+    <Routes>
+      <Route path="/Creds" element={<Creds />} />
+
+
+    </Routes>
+  </BrowserRouter>
 )

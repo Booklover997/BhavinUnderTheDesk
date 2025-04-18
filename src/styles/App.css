@@ -1,6 +1,7 @@
 :root{
   --background:#2b2d42;
   --white:#edf2f4;
+  --linkColor:red;
 }
 /* default to border-box */
 html {
@@ -23,7 +24,7 @@ body {
 }
 
 .cert{
-  max-width:40%;
+  max-width:20%;
   height:auto;
 }
 
@@ -31,7 +32,7 @@ body {
 .c-container{
   display:flex;
   width:100%;
-  transform: translateY(-50%) rotate(31.33deg);
+  transform: translateY(-40%) rotate(31.33deg);
   transform-origin: bottom left;
   will-change:transform;
   position:fixed;
@@ -39,24 +40,5 @@ body {
 .borgum{
   height:400vw; 
  position:relative;
-}
-
-/* Navbar */
-.navbar{
-  align-items: center;
-  display:flex;
-  justify-content: space-between;
-}
-.elements{
-  display:flex;
-  list-style-type:none;
-  margin:0;
-  justify-content:space-between;
-  align-items: center;
-}
-
-.elements li{
-  align-items:center;
-  justify-content: center;
 }
 

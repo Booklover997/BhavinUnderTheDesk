@@ -16,32 +16,39 @@ export default function Home() {
         setHeight(containerRef.current.clientHeight);
       }
     };
-
+  
     const calculateWidth = () => {
-      const images = [AWS, GSEC, GFACT, Bhavin];
-      const totalWidth = images.reduce((acc, img) => {
-        const imgElement = new Image();
-        imgElement.src = img;
-        return acc + imgElement.width; // Add the width of each image
-      }, 0);
-      setBorgumHeight(totalWidth); // Set borgum height based on total width
+      const imageSources = [AWS, GSEC, GFACT, Bhavin];
+      
+      Promise.all(imageSources.map(src => {
+        return new Promise((resolve) => {
+          const img = new Image();
+          img.onload = () => resolve(img.width);
+          img.src = src;
+        });
+      }))
+      .then(widths => {
+        const totalWidth = widths.reduce((acc, width) => acc + width, 0);
+        setBorgumHeight(totalWidth);
+      });
     };
-
+  
     const handleScroll = () => {
       const scrollTop = window.pageYOffset;
       if (containerRef.current) {
         containerRef.current.style.transform = `translateY(-40%) rotate(31.33deg) translateX(calc(-${scrollTop}px))`;
       }
     };
-
+  
     updateHeight();
     calculateWidth();
     window.addEventListener("scroll", handleScroll);
-
+  
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  
 
   return (
     <>

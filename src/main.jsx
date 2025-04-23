@@ -14,6 +14,7 @@ createRoot(document.getElementById('root')).render(
     <Nav/>
     <Routes>
       <Route path="/Creds" element={<Creds />} />
+      <Route path="/Enemies" element={<Enemies />} />
 
 
     </Routes>

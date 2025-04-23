@@ -1,58 +1,16 @@
 import { useEffect, useRef, useState } from "react";
-import AWS from "../assets/AWS.svg";
-import GSEC from "../assets/GSEC.svg";
-import GFACT from "../assets/GFACT.svg";
-import Bhavin from "../assets/Bhavin.svg";
+import Enemy from "./Enemy.jsx"
 import "../styles/App.css";
 
-export default function Home() {
-  const containerRef = useRef(null);
-  const [height, setHeight] = useState(0);
-  const [borgumHeight, setBorgumHeight] = useState(0);
-
-  useEffect(() => {
-    const updateHeight = () => {
-      if (containerRef.current) {
-        setHeight(containerRef.current.clientHeight);
-      }
-    };
-
-    const calculateWidth = () => {
-      const images = [AWS, GSEC, GFACT, Bhavin];
-      const totalWidth = images.reduce((acc, img) => {
-        const imgElement = new Image();
-        imgElement.src = img;
-        return acc + imgElement.width; // Add the width of each image
-      }, 0);
-      setBorgumHeight(totalWidth); // Set borgum height based on total width
-    };
-
-    const handleScroll = () => {
-      const scrollTop = window.pageYOffset;
-      if (containerRef.current) {
-        containerRef.current.style.transform = `translateY(-40%) rotate(31.33deg) translateX(calc(-${scrollTop}px))`;
-      }
-    };
-
-    updateHeight();
-    calculateWidth();
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
+export default function Enemies() {
   return (
     <>
-      <div className="content-body">
-        <div className="c-container" ref={containerRef}>
-          <img className="cert" src={AWS} alt="AWS Certificate" />
-          <img className="cert" src={GSEC} alt="GSEC Certificate" />
-          <img className="cert" src={GFACT} alt="GFACT Certificate" />
-          <img className="etc" src={Bhavin} alt="Bhavin" />
-        </div>
-        <div className="borgum" style={{ height: `${borgumHeight}px` }}></div>
+      <div className="enemiesContainer">
+          <h1>My Enemies List</h1>
+          <Enemy name="Squid Proxy Lovers" reason="Capitalist merger goons who won't answer me on instagram" />
+          <Enemy name="C-bass" reason="Part of SPL and sends me terrible instagram reels" />
+          <Enemy name="Vip3r" reason="Part of SPL also kinda of an SPL insider agent" />
+          <Enemy name="Bones Author" reason="Wrote the worst thing I have ever read" />
       </div>
     </>
   );

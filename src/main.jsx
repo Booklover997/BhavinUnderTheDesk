@@ -13,8 +13,8 @@ createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Nav/>
     <Routes>
-      <Route path="/Creds" element={<Creds />} />
-      <Route path="/Enemies" element={<Enemies />} />
+      <Route path="/certs" element={<Creds />} />
+      <Route path="/enemies" element={<Enemies />} />
 
 
     </Routes>

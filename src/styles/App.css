@@ -42,3 +42,31 @@ body {
  position:relative;
 }
 
+
+/* Home Page */
+
+#Discord_Slider:hover #Discord, #Instagram_Icon:hover #Instagram, #Facebook_Icon:hover #Facebook {
+  transform: translate(-1px, -3px);
+opacity: 0.8;
+}
+.followContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width:100%;
+}
+.socialsContainer{
+    display:flex;
+    justify-content: center;
+  width:100%;
+}
+.social{
+  width: 20%;
+  height:auto;
+  overflow:visible;
+}
+
+#Discord, #Instagram, #Facebook{
+  transition: 0.3s ease;
+}

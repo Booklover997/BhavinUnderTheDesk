@@ -6,13 +6,13 @@ import Creds from './pages/Creds.jsx';
 import Enemies from './pages/Enemies.jsx';
 import Home from './pages/Home.jsx';
 import Writeups from './pages/Writeups.jsx';
-
 import Nav from './pages/Nav.jsx';
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Nav/>
     <Routes>
+      <Route path="/" element={<Home />} />
       <Route path="/certs" element={<Creds />} />
       <Route path="/enemies" element={<Enemies />} />
 

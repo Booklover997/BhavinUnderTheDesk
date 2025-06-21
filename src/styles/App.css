@@ -70,3 +70,56 @@ opacity: 0.8;
 #Discord, #Instagram, #Facebook{
   transition: 0.3s ease;
 }
+
+/* Coffee */
+.coffeeContainer{
+  display:flex;
+  align-items: center;
+  width:100%;
+  justify-content: center;
+  padding:10rem 0rem;
+}
+.coffeeContainer div {
+  width:30%;
+  text-align: center;
+  margin:2rem;
+}
+.coffee{
+  width:10%;
+  height:auto;
+}
+
+/* Card Section */
+.cardContainer{
+  width:100%;
+  display:flex;
+  justify-content: center;
+}
+.card{
+  width:auto;
+  height:15rem;
+}
+.cards svg {
+  transition: transform 0.3s ease;
+}
+
+.cards svg:nth-child(4) {
+  transform: rotate(15deg) translateY(10%);
+}
+
+.cards svg:nth-child(3) {
+  transform: rotate(5deg);
+}
+
+.cards svg:nth-child(2) {
+  transform: rotate(-5deg);
+}
+
+.cards svg:nth-child(1) {
+  transform: rotate(-15deg) translateY(10%);
+}
+
+/* This is your universal hover class */
+.cards svg:hover {
+  transform: translateY(-20%) !important;
+}

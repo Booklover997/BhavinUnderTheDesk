@@ -7,7 +7,7 @@ import Enemies from './pages/Enemies.jsx';
 import Home from './pages/Home.jsx';
 import Writeups from './pages/Writeups.jsx';
 import Nav from './pages/Nav.jsx';
-
+import Bhavin from './pages/Bhavin.jsx'
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Nav/>
@@ -15,7 +15,9 @@ createRoot(document.getElementById('root')).render(
       <Route path="/" element={<Home />} />
       <Route path="/certs" element={<Creds />} />
       <Route path="/enemies" element={<Enemies />} />
-
+      <Route path="/bhavin" element={<Bhavin />} />
+      <Route path="/enemies" element={<Enemies />} />
+      <Route path="/writeups" element={<Writeups />} />
 
     </Routes>
   </BrowserRouter>

@@ -94,32 +94,43 @@ opacity: 0.8;
   width:100%;
   display:flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
-.card{
-  width:auto;
+
+.cards{
+  width:100%;
+  display:flex;
+}
+.cards div{
+  max-width:25%;
   height:15rem;
 }
-.cards svg {
+.card{
+  height:15rem;
+  width: auto;
+}
+.cards div svg {
   transition: transform 0.3s ease;
 }
 
-.cards svg:nth-child(4) {
+.cards div:nth-of-type(4) svg {
   transform: rotate(15deg) translateY(10%);
 }
 
-.cards svg:nth-child(3) {
+.cards div:nth-of-type(3) svg {
   transform: rotate(5deg);
 }
 
-.cards svg:nth-child(2) {
+.cards div:nth-of-type(2) svg {
   transform: rotate(-5deg);
 }
 
-.cards svg:nth-child(1) {
+.cards div:nth-of-type(1) svg {
   transform: rotate(-15deg) translateY(10%);
 }
 
-/* This is your universal hover class */
-.cards svg:hover {
+/* Hover event for all the cards */
+.cards div:hover svg {
   transform: translateY(-20%) !important;
 }

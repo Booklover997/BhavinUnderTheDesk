@@ -12,17 +12,17 @@ import Claw from "../assets/Claw_Card.svg?react";
 import Jimbo from "../assets/Jimbo_Card.svg?react";
 import Spade from "../assets/Spade_Card.svg?react";
 import Stoat from "../assets/Inscryption_Stoat.svg?react";
-
+import Card from "../components/Card.jsx";
 export default function Home() {
   return <>
   <h1>I'm a Cybersecurity student who competes in CTF's with 0xf1sh and a gamer/reader. This website is a compilation of my accomplishments and hobbies as well as funny people from my life. If anyone is mentioned on this website it is purely for fun and not in a serious manner.</h1>
   <div className = "cardContainer">
+          <h1>I Enjoy  Card Games</h1>
     <div className="cards">
-      <h1>I Enjoy  Card Games</h1>
-      <Claw className="card"/>
-      <Jimbo className="card"/>
-      <Spade className="card"/>
-      <Stoat className="card"/>
+        <Card svg={Claw} />
+        <Card svg={Jimbo} />
+        <Card svg={Spade} />
+        <Card svg={Stoat} />
     </div>
   </div>
   <div className="followContainer">

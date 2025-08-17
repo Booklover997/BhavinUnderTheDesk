@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import AWS from "../assets/AWS.svg";
 import GSEC from "../assets/GSEC.svg";
 import GFACT from "../assets/GFACT.svg";
+import GPEN from "../assets/GPEN.svg";
 import Bhavin from "../assets/Bhavin.svg";
 import "../styles/App.css";
 
@@ -48,6 +49,7 @@ export default function Home() {
       <div className="content-body">
         <div className="c-container" ref={containerRef}>
           <img className="cert" src={AWS} alt="AWS Certificate" />
+          <img className="cert" src={GPEN} alt="GPEN Certificate" />
           <img className="cert" src={GSEC} alt="GSEC Certificate" />
           <img className="cert" src={GFACT} alt="GFACT Certificate" />
           <img className="etc" src={Bhavin} alt="Bhavin" />

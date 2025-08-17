@@ -12,6 +12,9 @@ html {
 
 *, *:before, *:after {
   margin:0;
+  color:var(--white);
+  font-family: Inter;
+
 }
 
 /* adjust typography defaults */
@@ -55,6 +58,7 @@ opacity: 0.8;
   align-items: center;
   justify-content: center;
   width:100%;
+  padding:4rem 0rem;
 }
 .socialsContainer{
     display:flex;
@@ -96,11 +100,23 @@ opacity: 0.8;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  background:#07BEB8;
+  padding: 4rem 0;
+}
+.intro {
+  padding:8rem 15rem;
+}
+
+.cardContainer h1 {
+  color:black;
+  z-index: 2;
 }
 
 .cards{
   width:100%;
   display:flex;
+  justify-content: center;
+  padding:2rem;
 }
 .cards div{
   max-width:25%;
@@ -133,4 +149,74 @@ opacity: 0.8;
 /* Hover event for all the cards */
 .cards div:hover svg {
   transform: translateY(-20%) !important;
+}
+
+.writeupContainer{
+  padding:2rem 20rem;
+}
+
+.post {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding:1rem;
+  border-bottom: #07BEB8 solid;
+}
+
+.post::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0); 
+  transition: background 0.3s ease;
+}
+
+.post:hover::after {
+  background: rgba(0,0,0,0.1);
+}
+
+.post h1 {
+  font-weight: bold;
+  font-family: var(--normal);
+}
+
+.description { 
+  margin-top:1rem;
+  font-size: 1.3rem;
+}
+
+.date{
+  margin-left: auto;
+  font-weight: 600;
+}
+.tags{
+  display: flex;
+}
+
+.tags .tag {
+  border-radius: 1rem;
+  background-color: beige;
+  margin-right: 1rem;
+  padding:0.25rem 1rem;
+font-weight: 700;
+
+}
+
+.searchBar{
+  width:100%;
+  height:2rem;
+  padding:1rem;
+  border-radius: 2rem;
+}
+
+.tags .crypto{
+  background-color: rgb(255, 166, 0);
+}
+
+.tags .picoCTF2025 {
+  background-color: #cb0f2f;
+}
+
+.tags .mitm {
+  background-color: rgb(0, 88, 126);
 }

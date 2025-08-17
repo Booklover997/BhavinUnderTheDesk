@@ -4,56 +4,30 @@ import GSEC from "../assets/GSEC.svg";
 import GFACT from "../assets/GFACT.svg";
 import Bhavin from "../assets/Bhavin.svg";
 import "../styles/App.css";
+import posts from "../posts/posts.js";
+import { Link } from "react-router";
 
-export default function Home() {
-  const containerRef = useRef(null);
-  const [height, setHeight] = useState(0);
-  const [borgumHeight, setBorgumHeight] = useState(0);
-
-  useEffect(() => {
-    const updateHeight = () => {
-      if (containerRef.current) {
-        setHeight(containerRef.current.clientHeight);
-      }
-    };
-
-    const calculateWidth = () => {
-      const images = [AWS, GSEC, GFACT, Bhavin];
-      const totalWidth = images.reduce((acc, img) => {
-        const imgElement = new Image();
-        imgElement.src = img;
-        return acc + imgElement.width; // Add the width of each image
-      }, 0);
-      setBorgumHeight(totalWidth); // Set borgum height based on total width
-    };
-
-    const handleScroll = () => {
-      const scrollTop = window.pageYOffset;
-      if (containerRef.current) {
-        containerRef.current.style.transform = `translateY(-40%) rotate(31.33deg) translateX(calc(-${scrollTop}px))`;
-      }
-    };
-
-    updateHeight();
-    calculateWidth();
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
+export default function Writeups() {
   return (
     <>
-      <div className="content-body">
-        <div className="c-container" ref={containerRef}>
-          <img className="cert" src={AWS} alt="AWS Certificate" />
-          <img className="cert" src={GSEC} alt="GSEC Certificate" />
-          <img className="cert" src={GFACT} alt="GFACT Certificate" />
-          <img className="etc" src={Bhavin} alt="Bhavin" />
-        </div>
-        <div className="borgum" style={{ height: `${borgumHeight}px` }}></div>
+    <div className="writeupContainer">
+
+      {/* <input type="text" className="searchBar"></input> */}
+
+      {posts.map((post, i) => (
+
+        <Link to={post.slug} className="post" key={i}>
+          <h1>{post.title}</h1>
+          <div className="tags">
+            {post.tags.map((tag, tagIndex) => (
+              <div className={tag + " tag"} key={tagIndex}>{tag}</div>
+            ))}
+            <div className="date">{post.date.toLocaleDateString()}</div>
+          </div>
+          <p className="description">{post.description}</p>
+        </Link>
+      ))}
       </div>
     </>
-  );
+  )
 }

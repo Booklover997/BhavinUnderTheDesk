@@ -148,3 +148,7 @@ nav ul a{
   .pfp{
     border-radius: 50%;
   }
+
+  .navbar img {
+    width:8rem;
+  }

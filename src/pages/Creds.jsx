@@ -8,8 +8,15 @@ import "../styles/App.css";
 
 export default function Home() {
   const containerRef = useRef(null);
+  const imageRefs = useRef([]);
   const [height, setHeight] = useState(0);
   const [borgumHeight, setBorgumHeight] = useState(0);
+
+  const addImageRef = (el) => {
+    if (el && !imageRefs.current.includes(el)) {
+      imageRefs.current.push(el);
+    }
+  };
 
   useEffect(() => {
     const updateHeight = () => {
@@ -19,13 +26,11 @@ export default function Home() {
     };
 
     const calculateWidth = () => {
-      const images = [AWS, GSEC, GFACT, Bhavin];
-      const totalWidth = images.reduce((acc, img) => {
-        const imgElement = new Image();
-        imgElement.src = img;
-        return acc + imgElement.width; // Add the width of each image
+      const angle = Math.sin(0.54681165);
+      const totalWidth = imageRefs.current.reduce((acc, img) => {
+        return acc + img.naturalWidth * angle * 1.2;
       }, 0);
-      setBorgumHeight(totalWidth); // Set borgum height based on total width
+      setBorgumHeight(totalWidth);
     };
 
     const handleScroll = () => {
@@ -35,27 +40,39 @@ export default function Home() {
       }
     };
 
-    updateHeight();
-    calculateWidth();
+    // Wait until all images have loaded
+    const handleLoad = () => {
+      updateHeight();
+      calculateWidth();
+    };
+
+    // Attach load events to all images
+    imageRefs.current.forEach((img) => {
+      if (img.complete) {
+        handleLoad(); // already loaded
+      } else {
+        img.addEventListener("load", handleLoad);
+      }
+    });
+
     window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      imageRefs.current.forEach((img) => img.removeEventListener("load", handleLoad));
     };
   }, []);
 
   return (
-    <>
-      <div className="content-body">
-        <div className="c-container" ref={containerRef}>
-          <img className="cert" src={AWS} alt="AWS Certificate" />
-          <img className="cert" src={GPEN} alt="GPEN Certificate" />
-          <img className="cert" src={GSEC} alt="GSEC Certificate" />
-          <img className="cert" src={GFACT} alt="GFACT Certificate" />
-          <img className="etc" src={Bhavin} alt="Bhavin" />
-        </div>
-        <div className="borgum" style={{ height: `${borgumHeight}px` }}></div>
+    <div className="content-body">
+      <div className="c-container" ref={containerRef}>
+        <img ref={addImageRef} className="cert" src={AWS} alt="AWS Certificate" />
+        <img ref={addImageRef} className="cert" src={GPEN} alt="GPEN Certificate" />
+        <img ref={addImageRef} className="cert" src={GSEC} alt="GSEC Certificate" />
+        <img ref={addImageRef} className="cert" src={GFACT} alt="GFACT Certificate" />
+        <img ref={addImageRef} className="etc" src={Bhavin} alt="Bhavin" />
       </div>
-    </>
+      <div className="borgum" style={{ height: `${borgumHeight}px` }}></div>
+    </div>
   );
 }

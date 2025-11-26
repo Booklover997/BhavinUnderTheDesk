@@ -15,7 +15,9 @@ import Stoat from "../assets/Inscryption_Stoat.svg?react";
 import Card from "../components/Card.jsx";
 export default function Home() {
   return <>
-  <h1 className="intro">I'm a Cybersecurity student who competes in CTF's with 0xf1sh and a gamer/reader. This website is a compilation of my accomplishments and hobbies as well as funny people from my life. If anyone is mentioned on this website it is purely for fun and not in a serious manner, and is a sign that I respect them.</h1>
+  <h3 className="intro">  <h1>About Me</h1>
+I'm a Cybersecurity student who competes in CTF's with bUNGus and a gamer/reader. This website is a compilation of my accomplishments and hobbies as well as funny people from my life. I have some cybersecurity CTF writeup's as well as some webnovel reviews that you can look at! If anyone is mentioned on this website it is purely for fun and not in a serious manner, and is a sign that I respect them.<button>Writeups</button></h3>
+  
   <div className = "cardContainer">
           <h1>I Enjoy  Card Games</h1>
     <div className="cards">
@@ -33,13 +35,13 @@ export default function Home() {
         <Facebook className="social"/>
       </div>
     </div>
-  <div className="coffeeContainer">
+  {/* <div className="coffeeContainer">
     <Coffee className="coffee"/>
     <div>
       <h1>Give me a star to help me buy coffee hehe</h1>
       <Star/>
     </div>
-  </div>
+  </div> */}
 
   </>
   ;

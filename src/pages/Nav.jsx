@@ -14,7 +14,7 @@ export default function Nav() {
         <li><Link to="/certs">Certs</Link></li>
         <li><Link to="/writeups">Writeups</Link></li>
         <li><Link to="/bhavin">Bhavin</Link></li>
-        <li><Link to="/enemies">Enemies</Link></li>
+        {/* <li><Link to="/enemies">Enemies</Link></li> */}
       </ul>
     </div>
   );

@@ -131,6 +131,9 @@ nav ul a{
     display:flex;
     justify-content: space-between;
     margin: 1rem 2rem;
+    max-width: 50rem;
+    margin-left:auto;
+    margin-right:auto;
   }
   .elements{
     display:flex;
@@ -143,6 +146,7 @@ nav ul a{
   .elements li{
     align-items:center;
     justify-content: center;
+    margin-left:1rem;
   }
   
   .pfp{

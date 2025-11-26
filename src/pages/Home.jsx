@@ -18,7 +18,7 @@ import Creds from "../assets/Certs.svg?react";
 export default function Home() {
   return <>
   <div className="intro">  <h1>About Me</h1>
-<h3>I'm a Cybersecurity student who competes in CTF's with bUNGus and a gamer/reader. This website is a compilation of my accomplishments and hobbies as well as funny people from my life. I have some cybersecurity CTF writeup's as well as some webnovel reviews that you can look at! If anyone is mentioned on this website it is purely for fun and not in a serious manner, and is a sign that I respect them.</h3>
+<h3>I'm a Cybersecurity student who competes in CTF's with bUNGus and a gamer/reader. This website is a compilation of my accomplishments and hobbies as well as funny people from my life. I have some cybersecurity CTF writeup's as well as some webnovel reviews that you can look at! I also enjoy doing some design work and all of the svg's on this site were designed by me (I do not own the rights to the characters depicted or entities). If anyone is mentioned on this website it is purely for fun and not in a serious manner, and is a sign that I respect them.</h3>
 <div className = "container">
   <button>Writeups<Writeup className="icon"></Writeup></button>
   <button>Certifications<Creds className="icon"></Creds></button>
@@ -26,7 +26,8 @@ export default function Home() {
   </div>
   
   <div className = "cardContainer">
-          <h1>I Enjoy  Card Games</h1>
+          <h1>I'm A Card Game Fanatic</h1>
+          <h3>Here are Some Favorites</h3>
     <div className="cards">
         <Card svg={Claw} />
         <Card svg={Jimbo} />

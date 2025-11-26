@@ -141,6 +141,9 @@ opacity: 0.8;
   align-items: center;
   padding: 4rem 0;
 }
+.cardContainer h3{
+  color:#A69CAC;
+}
 .intro {
   max-width: 50rem;
   padding:2rem 0rem;

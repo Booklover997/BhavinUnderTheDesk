@@ -15,6 +15,9 @@ import Stoat from "../assets/Inscryption_Stoat.svg?react";
 import Card from "../components/Card.jsx";
 import Writeup from "../assets/Writeups.svg?react";
 import Creds from "../assets/Certs.svg?react";
+import Laptop from "../assets/Laptop.svg?react";
+
+import Down from "../assets/Open_Arrow.svg?react";
 export default function Home() {
   return <>
   <div className="intro">  <h1>About Me</h1>
@@ -23,6 +26,17 @@ export default function Home() {
   <button>Writeups<Writeup className="icon"></Writeup></button>
   <button>Certifications<Creds className="icon"></Creds></button>
   </div>
+  </div>
+
+  <div className="CTF">
+    <Laptop/>
+    <div>
+      <h1><Down className="icon"/># Currently Learning</h1>
+        <h3>## Pwn ...</h3>
+        <h3>## Cryptography ...</h3>
+        <h3>## Reverse Engineering ...</h3>
+        <h3>## Electrical Engineering ...</h3>
+    </div>
   </div>
   
   <div className = "cardContainer">

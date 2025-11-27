@@ -1,3 +1,4 @@
+# Richochet
 This challenge sets up a radio communication between a robot and a controller. Looking at the code one thing was made very clear. 
 ```python
             # To avoid the bootstrapping problem, changing the address needs to

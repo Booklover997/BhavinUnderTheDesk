@@ -1,7 +1,7 @@
 const posts = [
   {
     title: "Richochet",
-    slug: "richochet",
+    slug: "richochet.md",
     tags: ["picoCTF2025", "crypto", "mitm"],
     file: "/writeups/richochet.md",
     date: new Date(2025, 2, 17),

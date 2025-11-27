@@ -8,6 +8,7 @@ import Home from './pages/Home.jsx';
 import Writeups from './pages/Writeups.jsx';
 import Nav from './pages/Nav.jsx';
 import Bhavin from './pages/Bhavin.jsx'
+import WriteupPage from "./pages/WriteupPage.jsx"
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Nav/>
@@ -18,6 +19,7 @@ createRoot(document.getElementById('root')).render(
       <Route path="/bhavin" element={<Bhavin />} />
       <Route path="/enemies" element={<Enemies />} />
       <Route path="/writeups" element={<Writeups />} />
+<Route path="/writeups/:name" element={<WriteupPage />} />
 
     </Routes>
   </BrowserRouter>

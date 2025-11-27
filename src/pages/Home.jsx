@@ -13,6 +13,8 @@ import Jimbo from "../assets/Jimbo_Card.svg?react";
 import Spade from "../assets/Spade_Card.svg?react";
 import Stoat from "../assets/Inscryption_Stoat.svg?react";
 import Card from "../components/Card.jsx";
+import Collapsible from "../components/Collapse.jsx";
+
 import Writeup from "../assets/Writeups.svg?react";
 import Creds from "../assets/Certs.svg?react";
 import Laptop from "../assets/Laptop.svg?react";
@@ -31,11 +33,13 @@ export default function Home() {
   <div className="CTF">
     <Laptop/>
     <div>
-      <h1><Down className="icon"/># Currently Learning</h1>
-        <h3>## Pwn ...</h3>
-        <h3>## Cryptography ...</h3>
-        <h3>## Reverse Engineering ...</h3>
-        <h3>## Electrical Engineering ...</h3>
+
+        <Collapsible title="# Currently Learning" open={true} content={<div>
+          <Collapsible title="## Pwn" size="h3" open={true} content={<div>Pwning</div>}></Collapsible>
+          <Collapsible title="## Cryptography"size="h3" open={true} content={<div>Cryptography</div>}></Collapsible>
+          <Collapsible title="## Reverse Engineering" size="h3"  open={true} content={<div>Reverse Engineering</div>}></Collapsible>
+          <Collapsible title="## Electrical Engineering" size="h3" open={true} content={<div>Electrical Engineering</div>}></Collapsible>
+        </div>} size="h1"></Collapsible>
     </div>
   </div>
   

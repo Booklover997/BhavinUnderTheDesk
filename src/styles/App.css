@@ -161,9 +161,32 @@ opacity: 0.8;
   display:flex;
 }
 .CTF svg{
-  max-width: 60%;
+  max-width: 50%;
   height:auto;
 }
+.CTF .collapseContainer .collapseHeader{
+  display:flex;
+}
+.CTF .icon {
+  height:0.25rem;
+  width:0.25rem;
+  margin-top: auto;
+  margin-bottom: auto;
+  width:auto;
+}
+.collapseIcons{
+  width:1rem;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  align-content: center;
+}
+
+.collapseContent .collapseContent{
+  margin-left:1rem;
+}
+
+
 .cardContainer h1 {
   z-index: 2;
 }

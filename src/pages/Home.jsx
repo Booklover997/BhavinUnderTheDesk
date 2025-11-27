@@ -35,10 +35,10 @@ export default function Home() {
     <div>
 
         <Collapsible title="# Currently Learning" open={true} content={<div>
-          <Collapsible title="## Pwn" size="h3" open={true} content={<div>Pwning</div>}></Collapsible>
-          <Collapsible title="## Cryptography"size="h3" open={true} content={<div>Cryptography</div>}></Collapsible>
-          <Collapsible title="## Reverse Engineering" size="h3"  open={true} content={<div>Reverse Engineering</div>}></Collapsible>
-          <Collapsible title="## Electrical Engineering" size="h3" open={true} content={<div>Electrical Engineering</div>}></Collapsible>
+          <Collapsible title="## Pwn" size="h3" open={true} content={<div><ul><li>Pwn.College(60% to Orange Belt)</li><li>Ret2Wargames(75% Done)</li></ul></div>}></Collapsible>
+          <Collapsible title="## Cryptography"size="h3" open={true} content={<ul><li>Cryptohack</li></ul>}></Collapsible>
+          <Collapsible title="## Reverse Engineering" size="h3"  open={true} content={<ul><li>Coding in C</li></ul>}></Collapsible>
+          <Collapsible title="## Electrical Engineering" size="h3" open={true} content={<ul><li>Building Computers</li></ul>}></Collapsible>
         </div>} size="h1"></Collapsible>
     </div>
   </div>

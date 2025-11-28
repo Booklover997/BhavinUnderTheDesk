@@ -234,7 +234,14 @@ opacity: 0.8;
 .writeupContainer{
   padding:2rem 20rem;
 }
-
+.language-python *, .language-json *{
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+.language-python, .language-json {
+  width:100%;
+  display:block;
+}
 .post {
   position: relative;
   display: block;

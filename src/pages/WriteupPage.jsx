@@ -9,9 +9,13 @@ import rehypeCallouts from 'rehype-callouts';
 import 'rehype-callouts/theme/vitepress'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
-
+import posts from "../posts/posts.js";
+import Calendar from "../assets/Calendar.svg?react";
+import Person from "../assets/Person.svg?react";
 export default function WriteupPage() {
-  const { name } = useParams(); // e.g., "richochet"
+  const { name } = useParams();  //expected : richochet.md
+  const { index } = useParams(); //expected : 0
+
   console.log(name);
   const [content, setContent] = useState("");
   const [error, setError] = useState("");
@@ -29,7 +33,14 @@ export default function WriteupPage() {
   if (error) return <div>{error}</div>;
 
   return (
+    <>
     <div className="writeup" style={{ padding: "2rem", maxWidth: "800px", margin: "0 auto" }}>
+    <h1 className="title">{posts[index].title}</h1>
+    <h3>{posts[index].subtitle}</h3>
+    <div className="stats">
+        <div className="author"><Person/> Doctor Jang</div>
+        <div className="date"><Calendar /> {posts[index].date.toDateString()}</div>
+      </div>
     <Markdown
       remarkPlugins={[remarkGfm]}
       rehypePlugins={[rehypeRaw, rehypeCallouts]}
@@ -52,5 +63,6 @@ export default function WriteupPage() {
       {content}
     </Markdown>
     </div>
+    </>
   );
 }

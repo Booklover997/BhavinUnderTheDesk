@@ -16,7 +16,7 @@ export default function Writeups() {
 
       {posts.map((post, i) => (
 
-        <Link to={post.slug} className="post" key={i}>
+        <Link to={post.slug + "/" + i} className="post" key={i}>
           <h1>{post.title}</h1>
           <div className="tags">
             {post.tags.map((tag, tagIndex) => (

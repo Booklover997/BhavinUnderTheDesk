@@ -267,7 +267,31 @@ opacity: 0.8;
   margin-top:2rem;
   color:#F1DAC4;
   margin-bottom: 2rem;
-
+}
+.writeup .title {
+  color:var(--white);
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.writeup h3{
+  margin-top:0rem;
+  color:#A69CAC;
+  margin-bottom: 1rem;
+}
+.writeup .date, .writeup .author {
+  display:flex;
+  margin-left: 0;
+}
+.writeup .date svg, .writeup .author svg {
+  height:1rem;
+  width:auto;
+  margin: auto 0.5rem auto 0;
+}
+.writeup .stats {
+  display:flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  font-weight: 600;
 }
 .writeup  h2{
   margin-top:1rem;

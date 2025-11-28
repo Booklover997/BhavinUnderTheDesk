@@ -19,7 +19,7 @@ createRoot(document.getElementById('root')).render(
       <Route path="/bhavin" element={<Bhavin />} />
       <Route path="/enemies" element={<Enemies />} />
       <Route path="/writeups" element={<Writeups />} />
-<Route path="/writeups/:name" element={<WriteupPage />} />
+<Route path="/writeups/:name/:index" element={<WriteupPage />} />
 
     </Routes>
   </BrowserRouter>

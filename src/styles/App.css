@@ -282,11 +282,17 @@ opacity: 0.8;
   display:flex;
   margin-left: 0;
 }
+
 .writeup .date svg, .writeup .author svg {
   height:1rem;
   width:auto;
   margin: auto 0.5rem auto 0;
+  fill:#0D0C1D;
 }
+
+.writeup  p + p {
+      margin-top: 1rem; 
+  }
 .writeup .stats {
   display:flex;
   justify-content: space-between;

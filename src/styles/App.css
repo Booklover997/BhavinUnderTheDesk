@@ -152,6 +152,7 @@ opacity: 0.8;
 }
 .cardContainer h3{
   color:#A69CAC;
+  text-align: center;
 }
 .intro {
   max-width: 50rem;
@@ -198,6 +199,7 @@ opacity: 0.8;
 
 .cardContainer h1 {
   z-index: 2;
+  text-align: center;
 }
 
 .cards{

@@ -1,8 +1,8 @@
 const posts = [
   {
     title: "Richochet",
-    subtitle: "richochet.md",
-    ctf: "picoCTF 2025",
+    slug: "richochet.md",
+    subtitle: "picoCTF 2025",
     tags: ["picoCTF2025", "crypto", "mitm"],
     date: new Date(2025, 2, 17),
     description: "A Man in the middle challenge where the goal is to break what looks to be a semi secure communication between a robot and a controller"

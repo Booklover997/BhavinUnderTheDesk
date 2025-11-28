@@ -1,10 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap');
 :root{
   --background:#2b2d42;
   --white:#edf2f4;
   --linkColor:red;
+  --bubblegum:#F76F8E;
+  --steelblue:#6D98BA;
+  --lobster:#DB5461;
+  --tangerine:#EF7B45;
 
 
 }
+
+
 
 /* https://coolors.co/d8dbe2-a9bcd0-2b2d42-f25757-f2e863 */
 /* https://coolors.co/palette/f1dac4-a69cac-474973-161b33-0d0c1d */
@@ -18,8 +26,7 @@ html {
 *, *:before, *:after {
   margin:0;
   color:var(--white);
-  font-family: sans-serif;
-
+  font-family:"Geist Mono", monospace;
 }
 
 /* adjust typography defaults */
@@ -234,12 +241,14 @@ opacity: 0.8;
 }
 
 .writeupContainer{
-  padding:2rem 20rem;
-}
+  max-width: 50rem;
+  padding:2rem 0rem;
+  margin-left: auto;
+  margin-right: auto;}
 .language-python *, .language-json *{
   white-space: pre-wrap;
   overflow-wrap: break-word;
-  font-family: Inconsolata, Monaco, Consolas, "Courier New", Courier, monospace;
+  font-family: monospace;
 }
 .language-python, .language-json {
   width:100%;
@@ -251,7 +260,10 @@ opacity: 0.8;
   display: block;
   overflow: hidden;
   padding:1rem;
-  border-bottom: #07BEB8 solid;
+  border-left: #474973 solid;
+  border-radius: 0.25rem;
+  border-width: 0.25rem;
+  margin-bottom: 2rem;
 }
 .callout{
   width:auto !important;
@@ -312,22 +324,25 @@ opacity: 0.8;
 }
 
 .post:hover::after {
-  background: rgba(0,0,0,0.1);
+  background: rgba(160, 160, 160, 0.1);
 }
 
-.post h1 {
+h1, .post h2{
   font-weight: bold;
-  font-family: var(--normal);
+  font-family: "Geist", sans-serif  ;
 }
 
 .description { 
   margin-top:1rem;
-  font-size: 1.3rem;
 }
 
 .date{
   margin-left: auto;
   font-weight: 600;
+  display: flex;
+}
+.date .icon {
+  margin-right: 0.5rem;
 }
 .tags{
   display: flex;
@@ -335,10 +350,10 @@ opacity: 0.8;
 
 .tags .tag {
   border-radius: 1rem;
-  background-color: beige;
+  background-color: #474973;
   margin-right: 1rem;
   padding:0.25rem 1rem;
-font-weight: 700;
+  font-weight: 600;
 
 }
 
@@ -350,13 +365,22 @@ font-weight: 700;
 }
 
 .tags .crypto{
-  background-color: rgb(255, 166, 0);
+  background-color: var(--tangerine)
 }
 
 .tags .picoCTF2025 {
-  background-color: #cb0f2f;
+  background-color: var(--lobster);
+}
+.tags .NCL {
+  background-color: var(--bubblegum);
+}
+.tags .reveng {
+  background-color: var(--lobster);
+}
+.tags .forensics {
+  background-color: var(--steelblue);
+}
+.tags.web {
+  background-color: #ACFCD9;
 }
 
-.tags .mitm {
-  background-color: rgb(0, 88, 126);
-}

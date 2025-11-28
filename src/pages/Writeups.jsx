@@ -6,6 +6,7 @@ import Bhavin from "../assets/Bhavin.svg";
 import "../styles/App.css";
 import posts from "../posts/posts.js";
 import { Link } from "react-router";
+import Calendar from "../assets/Calendar.svg?react";
 
 export default function Writeups() {
   return (
@@ -14,15 +15,15 @@ export default function Writeups() {
 
       {/* <input type="text" className="searchBar"></input> */}
 
-      {posts.map((post, i) => (
+      {posts.reverse().map((post, i) => (
 
         <Link to={post.slug + "/" + i} className="post" key={i}>
-          <h1>{post.title}</h1>
+          <h2>{post.title}</h2 >
           <div className="tags">
             {post.tags.map((tag, tagIndex) => (
               <div className={tag + " tag"} key={tagIndex}>{tag}</div>
             ))}
-            <div className="date">{post.date.toLocaleDateString()}</div>
+            <div className="date"><Calendar className="icon" />{post.date.toLocaleDateString()}</div>
           </div>
           <p className="description">{post.description}</p>
         </Link>

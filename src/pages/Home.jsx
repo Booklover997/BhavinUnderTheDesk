@@ -34,7 +34,7 @@ export default function Home() {
     <Laptop/>
     <div>
 
-        <Collapsible title="# Currently Learning" open={true} content={<div>
+        <Collapsible title="# TODO" open={true} content={<div>
           <Collapsible title="## Pwn" size="h3" open={true} content={<div><ul><li>Pwn.College(60% to Orange Belt)</li><li>Ret2Wargames(75% Done)</li></ul></div>}></Collapsible>
           <Collapsible title="## Cryptography"size="h3" open={true} content={<ul><li>Cryptohack</li></ul>}></Collapsible>
           <Collapsible title="## Reverse Engineering" size="h3"  open={true} content={<ul><li>Coding in C</li></ul>}></Collapsible>

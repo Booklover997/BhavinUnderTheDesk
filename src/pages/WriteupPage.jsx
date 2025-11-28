@@ -5,6 +5,8 @@ import React from 'react';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
+import rehypeCallouts from 'rehype-callouts';
+import 'rehype-callouts/theme/vitepress'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
@@ -27,10 +29,10 @@ export default function WriteupPage() {
   if (error) return <div>{error}</div>;
 
   return (
-    <div style={{ padding: "2rem", maxWidth: "800px", margin: "0 auto" }}>
+    <div className="writeup" style={{ padding: "2rem", maxWidth: "800px", margin: "0 auto" }}>
     <Markdown
       remarkPlugins={[remarkGfm]}
-      rehypePlugins={[rehypeRaw]}
+      rehypePlugins={[rehypeRaw, rehypeCallouts]}
       components={{
         code({ node, inline, className, children, ...props }) {
           const match = /language-(\w+)/.exec(className || '');

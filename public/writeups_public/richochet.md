@@ -12,6 +12,10 @@ This challenge sets up a radio communication between a robot and a controller. L
                 })
 ```
 
+> [!Tip]
+> In situations like this where you have to deal with multiple different entities I like to use classes to represent each entity.
+
+
 This seems to be a very clear indication that this is a mitm attack challenge. Making a script to do this works and clearly shows that we are able to intercept communications. 
 
 The second step would be to exchange public keys and do a dh exchange with both the robot and controller. This allows us to decrypt the information, check it, and encrypt it going the other way.

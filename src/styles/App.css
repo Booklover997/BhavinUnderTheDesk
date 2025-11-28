@@ -2,6 +2,11 @@
   --background:#2b2d42;
   --white:#edf2f4;
   --linkColor:red;
+    --callout-note-color-light: pink;
+  --callout-note-color-dark: #ffc0cb;
+  --callout-tip-color-light: rgb(255, 192, 203);
+  --callout-tip-color-dark: hsl(350, 100%, 88%);
+
 }
 
 /* https://coolors.co/d8dbe2-a9bcd0-2b2d42-f25757-f2e863 */
@@ -237,10 +242,12 @@ opacity: 0.8;
 .language-python *, .language-json *{
   white-space: pre-wrap;
   overflow-wrap: break-word;
+  font-family: Inconsolata, Monaco, Consolas, "Courier New", Courier, monospace;
 }
 .language-python, .language-json {
   width:100%;
   display:block;
+  font-family: Inconsolata, Monaco, Consolas, "Courier New", Courier, monospace;
 }
 .post {
   position: relative;
@@ -249,7 +256,17 @@ opacity: 0.8;
   padding:1rem;
   border-bottom: #07BEB8 solid;
 }
+.callout{
+  width:auto !important;
+}
 
+.writeup img{
+  max-width: 80%;
+  max-height:10rem;
+  margin-left:auto;
+  margin-right:auto;
+  display:block;
+}
 .post::after {
   content: "";
   position: absolute;

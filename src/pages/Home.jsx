@@ -56,7 +56,7 @@ export default function Home() {
   <div className="followContainer">
       <h1>Drop A Follow!</h1>
       <div className="socialsContainer">
-        <Discord className="social"/>
+        <a href="https://discord.com/users/347181565488529419"><Discord className="social"/></a>
         <Instagram className="social"/>
         <Facebook className="social"/>
       </div>

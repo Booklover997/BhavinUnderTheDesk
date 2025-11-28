@@ -3,7 +3,7 @@
 :root{
   --background:#2b2d42;
   --white:#edf2f4;
-  --linkColor:red;
+  --linkColor:#A69CAC;
   --bubblegum:#F76F8E;
   --steelblue:#6D98BA;
   --lobster:#DB5461;
@@ -244,7 +244,9 @@ opacity: 0.8;
   max-width: 50rem;
   padding:2rem 0rem;
   margin-left: auto;
-  margin-right: auto;}
+  margin-right: auto;
+display: flex;
+flex-direction: column-reverse;}
 .language-python *, .language-json *{
   white-space: pre-wrap;
   overflow-wrap: break-word;
@@ -276,7 +278,7 @@ opacity: 0.8;
   display:block;
 }
 .writeup  h1{
-  margin-top:2rem;
+  margin-top:0rem;
   color:#F1DAC4;
   margin-bottom: 2rem;
 }
@@ -384,3 +386,9 @@ h1, .post h2{
   background-color: #ACFCD9;
 }
 
+    @media (max-width: 600px) {
+        .stats {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }

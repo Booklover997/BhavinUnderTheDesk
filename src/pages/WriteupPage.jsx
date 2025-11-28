@@ -35,11 +35,16 @@ export default function WriteupPage() {
   return (
     <>
     <div className="writeup" style={{ padding: "2rem", maxWidth: "800px", margin: "0 auto" }}>
+      <div className="tags">
+                  {posts[index].tags.map((tag, tagIndex) => (
+              <div className={tag + " tag"} key={tagIndex}>{tag}</div>
+            ))}
+      </div>
     <h1 className="title">{posts[index].title}</h1>
     <h3>{posts[index].subtitle}</h3>
     <div className="stats">
-        <div className="author"><Person/> Doctor Jang</div>
-        <div className="date"><Calendar /> {posts[index].date.toDateString()}</div>
+        <div className="author"><Person className="icon"/> Doctor Jang</div>
+        <div className="date"><Calendar className="icon" /> {posts[index].date.toLocaleDateString()}</div>
       </div>
     <Markdown
       remarkPlugins={[remarkGfm]}

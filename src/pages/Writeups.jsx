@@ -12,10 +12,9 @@ export default function Writeups() {
   return (
     <>
     <div className="writeupContainer">
-
       {/* <input type="text" className="searchBar"></input> */}
 
-      {posts.reverse().map((post, i) => (
+      {posts.map((post, i) => (
 
         <Link to={post.slug + "/" + i} className="post" key={i}>
           <h2>{post.title}</h2 >

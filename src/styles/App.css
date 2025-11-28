@@ -2,10 +2,7 @@
   --background:#2b2d42;
   --white:#edf2f4;
   --linkColor:red;
-    --callout-note-color-light: pink;
-  --callout-note-color-dark: #ffc0cb;
-  --callout-tip-color-light: rgb(255, 192, 203);
-  --callout-tip-color-dark: hsl(350, 100%, 88%);
+
 
 }
 
@@ -263,9 +260,18 @@ opacity: 0.8;
 .writeup img{
   max-width: 80%;
   max-height:10rem;
-  margin-left:auto;
-  margin-right:auto;
+  margin:2rem auto;
   display:block;
+}
+.writeup  h1{
+  margin-top:2rem;
+  color:#F1DAC4;
+  margin-bottom: 2rem;
+
+}
+.writeup  h2{
+  margin-top:1rem;
+  margin-bottom: 1rem;
 }
 .post::after {
   content: "";

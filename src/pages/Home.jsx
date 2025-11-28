@@ -7,6 +7,7 @@ import Facebook  from "../assets/Facebook_Icon.svg?react";
 
 import Coffee from "../assets/Github_Coffee.svg?react";
 import Star from "../assets/Github_Star.svg?react";
+import { Link } from "react-router-dom";
 
 import Claw from "../assets/Claw_Card.svg?react";
 import Jimbo from "../assets/Jimbo_Card.svg?react";
@@ -25,8 +26,8 @@ export default function Home() {
   <div className="intro">  <h1>About Me</h1>
 <h3>I'm a Cybersecurity student who competes in CTF's with bUNGus and a gamer/reader. This website is a compilation of my accomplishments and hobbies as well as funny people from my life. I have some cybersecurity CTF writeup's as well as some webnovel reviews that you can look at! I also enjoy doing some design work and all of the svg's on this site were designed by me (I do not own the rights to the characters depicted or entities). If anyone is mentioned on this website it is purely for fun and not in a serious manner, and is a sign that I respect them.</h3>
 <div className = "container">
-  <button>Writeups<Writeup className="icon"></Writeup></button>
-  <button>Certifications<Creds className="icon"></Creds></button>
+  <Link to="/writeups"><button>Writeups<Writeup className="icon"></Writeup></button></Link>
+  <Link to="/certs"><button>Certifications<Creds className="icon"></Creds></button></Link>
   </div>
   </div>
 

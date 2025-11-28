@@ -391,4 +391,10 @@ h1, .post h2{
             flex-direction: column;
             align-items: flex-start;
         }
+        .CTF {
+          flex-direction: column;
+        }
+        #root {
+          padding: 1rem;
+        }
     }

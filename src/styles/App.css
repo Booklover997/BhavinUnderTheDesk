@@ -350,6 +350,7 @@ h1, .post h2{
 }
 .tags{
   display: flex;
+  flex-wrap: wrap;
 }
 
 .tags .tag {

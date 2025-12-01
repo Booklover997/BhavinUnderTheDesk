@@ -403,5 +403,11 @@ h1, .post h2{
         .CTF, .intro {
           padding: 2rem;
         }
+        .CTF svg{
+          max-width: 75%;
+        }
+        .tags {
+          flex-wrap: wrap;
+        }
 
     }

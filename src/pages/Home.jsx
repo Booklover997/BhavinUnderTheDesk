@@ -30,7 +30,10 @@ export default function Home() {
   <Link to="/certs"><button>Certifications<Creds className="icon"></Creds></button></Link>
   </div>
   </div>
+  <div>  
 
+<script src="https://asciinema.org/a/BsRtW5EJcnxFVCBBs6XiHMDye.js" id="asciicast-BsRtW5EJcnxFVCBBs6XiHMDye" async></script>
+</div>
   <div className="CTF">
     <Laptop/>
     <div>

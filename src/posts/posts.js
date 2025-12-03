@@ -19,7 +19,7 @@ const posts = [
   //   title: "Codebreaker 2025 Walkthrough",
   //   subtitle: "Codebreaker",
   //   slug: "codebreaker2025.md",
-  //   tags: ["NCL"],
+  //   tags: ["CodeBreaker2025"],
   //   date: new Date(2025, 10, 27),
   //   description: "A full walkthrough of the 2025 NSA Codebreaker challenge detailed walkthroughs of multiple different solve paths."
   // }

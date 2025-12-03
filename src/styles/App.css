@@ -42,7 +42,10 @@ body {
   max-width:20%;
   height:auto;
 }
-
+.test {
+  height:400px;
+  width:400px;
+}
 /* Credentials Container  - display flex keeps on same line and bottom left origin keeps set at start of the body. */
 .c-container{
   display:flex;
@@ -241,7 +244,44 @@ opacity: 0.8;
   transform: translateY(-20%) !important;
   scale:100%;
 }
+.toc {
+  position:fixed;
+  right:7%;
+  top:auto;
+}
+.toc-item a{
+  position:relative;
+  
+}
 
+.toc-item.active a {
+  color: #0066cc;
+  font-weight: bold;
+  border-left: 3px solid #0066cc;
+  padding-left: 8px;
+}
+
+.toc-item{
+  margin-bottom: 0.5rem;;
+}
+.toc-item a:before{
+  transition: transform .12s cubic-bezier(.23, 1, .32, 1) 0s, background .12s cubic-bezier(.23, 1, .32, 1) 0s;
+  background:#474973;
+  transform-origin: center bottom;
+  content: "";
+    display: block;
+    inset: 0;
+    position: absolute;
+    z-index: -1;
+      transform:scaleY(0.1);
+
+}
+.toc-item a:hover:before{
+  transform:scaleY(1);
+}
+.writeup {
+  position:relative;
+}
 .writeupContainer{
   max-width: 50rem;
   padding:2rem 0rem;
@@ -309,6 +349,9 @@ flex-direction: column-reverse;}
 .writeup  p + p {
       margin-top: 1rem; 
   }
+  .writeup h1:has(+ h3) {
+  margin-bottom: 0rem;
+}
 .writeup .stats {
   display:flex;
   justify-content: space-between;
@@ -318,6 +361,34 @@ flex-direction: column-reverse;}
 .writeup  h2{
   margin-top:1rem;
   margin-bottom: 1rem;
+}
+.given {
+  background-color: #161B33;
+  padding:0.5rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+  margin:0rem;
+  font-family: monospace;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  
+
+}
+html {
+  scroll-behavior: smooth;
+}
+.given::before {
+  content: "";
+  display: inline-block; /* keeps it on the same line as content */
+  width: 30px;
+  height: 20px;
+  background-image: url('/src/assets/File.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+  vertical-align: middle;
+  filter: brightness(0) invert(1); 
 }
 .post::after {
   content: "";
@@ -408,6 +479,9 @@ h1, .post h2{
         }
         .tags {
           flex-wrap: wrap;
+        }
+        .toc {
+          display: none;
         }
 
     }

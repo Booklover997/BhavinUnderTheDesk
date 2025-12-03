@@ -21,6 +21,7 @@ import Creds from "../assets/Certs.svg?react";
 import Laptop from "../assets/Laptop.svg?react";
 
 import Down from "../assets/Open_Arrow.svg?react";
+import { Helmet } from "react-helmet";
 export default function Home() {
   return <>
   <div className="intro">  <h1>About Me</h1>
@@ -30,10 +31,7 @@ export default function Home() {
   <Link to="/certs"><button>Certifications<Creds className="icon"></Creds></button></Link>
   </div>
   </div>
-  <div>  
 
-<script src="https://asciinema.org/a/BsRtW5EJcnxFVCBBs6XiHMDye.js" id="asciicast-BsRtW5EJcnxFVCBBs6XiHMDye" async></script>
-</div>
   <div className="CTF">
     <Laptop/>
     <div>
